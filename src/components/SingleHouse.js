@@ -26,18 +26,19 @@ const SingleHouse = ({
     },
   };
   const dispatch = useDispatch();
-  const { singlehouse, favorite } = useSelector((state) => state.houses);
+  const { favorite } = useSelector((state) => state.houses);
   const favadded = [];
   let addButton;
   const handleAddFavorite = (event) => {
     event.preventDefault();
-    const userid = id;
-    const houseid = singlehouse.id;
-    const favoritee = {
-      user_id: userid,
-      house_id: houseid,
-    };
-    dispatch(addfavorite(favoritee));
+    // const userid = id;
+    // const houseid = singlehouse.id;
+    // const favoritee = {
+    //   user_id: userid,
+    //   house_id: houseid,
+    // };
+    // dispatch(addfavorite(favoritee));
+    dispatch(removefavorite(id));
     Notify();
   };
   const handleRemoveFavorite = (event) => {
