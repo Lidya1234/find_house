@@ -33,7 +33,7 @@ const SingleHouse = ({
   let addButton;
   const handleAddFavorite = (event) => {
     event.preventDefault();
-    const userid = id;
+    const userid = 1;
     const houseid = singlehouse.id;
     const favoritee = {
       user_id: userid,
