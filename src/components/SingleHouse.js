@@ -47,7 +47,7 @@ const SingleHouse = ({
   };
   const handleRemoveFavorite = (event) => {
     event.preventDefault();
-    dispatch(removefavorite(singlehouse.id));
+    dispatch(removefavorite(id));
     setTimeout(() => {
       history.push('/FavouriteList');
       Notify();
