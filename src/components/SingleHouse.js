@@ -46,7 +46,7 @@ const SingleHouse = ({
     Notify();
   };
   if (favorite !== undefined) {
-    favorite.foreach((favhouse) => {
+    favorite.forEach((favhouse) => {
       if (favhouse.house_id === id) {
         favadded.push(true);
       } else {
