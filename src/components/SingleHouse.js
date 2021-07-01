@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 import { PropTypes } from 'prop-types';
 import '../style/style.css';
 import '../style/Rating.css';
@@ -26,6 +27,7 @@ const SingleHouse = ({
     },
   };
   const dispatch = useDispatch();
+  const history = useHistory();
   const { singlehouse, favorite } = useSelector((state) => state.houses);
   const favadded = [];
   let addButton;
@@ -43,8 +45,9 @@ const SingleHouse = ({
     setTimeout(() => {
       dispatch(fetchFavorite);
       btnA = 'Remove from Favourite';
+      history.push('/FavouriteList');
       Notify();
-    }, 5000);
+    }, 6000);
   };
   const handleRemoveFavorite = (event) => {
     event.preventDefault();
@@ -52,8 +55,9 @@ const SingleHouse = ({
     setTimeout(() => {
       dispatch(fetchFavorite);
       btnR = 'Add to Favourite';
+      history.push('/FavouriteList');
       Notify();
-    }, 5000);
+    }, 6000);
   };
   if (favorite !== undefined) {
     favorite.forEach((favhouse) => {
