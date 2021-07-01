@@ -38,12 +38,16 @@ const SingleHouse = ({
       house_id: houseid,
     };
     dispatch(addfavorite(favoritee));
-    Notify();
+    setTimeout(() => {
+      Notify();
+    }, 5000);
   };
   const handleRemoveFavorite = (event) => {
     event.preventDefault();
     dispatch(removefavorite(id));
-    Notify();
+    setTimeout(() => {
+      Notify();
+    }, 5000);
   };
   if (favorite !== undefined) {
     favorite.forEach((favhouse) => {
