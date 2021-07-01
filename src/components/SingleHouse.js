@@ -6,7 +6,7 @@ import '../style/Rating.css';
 import ReactTextCollapse from 'react-text-collapse';
 import { FaAngleDown, FaAngleUp } from 'react-icons/fa';
 import Notify from '../Notification/Notify';
-import { addfavorite, removefavorite } from '../reducers/findSlice';
+import { removefavorite } from '../reducers/findSlice';
 
 const SingleHouse = ({
   id, name, image, price, rank, description,
