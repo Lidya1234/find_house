@@ -29,8 +29,8 @@ const SingleHouse = ({
   const { singlehouse, favorite } = useSelector((state) => state.houses);
   const favadded = [];
   let addButton;
-  let add = 'Add to Favourite';
-  let remove = 'Remove from Favourite';
+  let btnA = 'Add to Favourite';
+  let btnR = 'Remove from Favourite';
   const handleAddFavorite = (event) => {
     event.preventDefault();
     const userid = id;
@@ -42,7 +42,7 @@ const SingleHouse = ({
     dispatch(addfavorite(favoritee));
     setTimeout(() => {
       dispatch(fetchFavorite);
-      add = 'Remove from Favourite';
+      btnA = 'Remove from Favourite';
       Notify();
     }, 5000);
   };
@@ -51,7 +51,7 @@ const SingleHouse = ({
     dispatch(removefavorite(id));
     setTimeout(() => {
       dispatch(fetchFavorite);
-      remove = 'Add to Favourite';
+      btnR = 'Add to Favourite';
       Notify();
     }, 5000);
   };
@@ -73,7 +73,7 @@ const SingleHouse = ({
         className="appbtn"
         onClick={handleRemoveFavorite}
       >
-        {remove}
+        {btnR}
       </button>
     );
   } else {
@@ -84,7 +84,7 @@ const SingleHouse = ({
         className="appbtn"
         onClick={handleAddFavorite}
       >
-        {add}
+        {btnA}
       </button>
     );
   }
