@@ -26,23 +26,59 @@ const SingleHouse = ({
     },
   };
   const dispatch = useDispatch();
-  const { singlehouse, isAdded } = useSelector((state) => state.houses);
+  const { singlehouse, favorite } = useSelector((state) => state.houses);
+  const favadded = [];
+  let addButton;
   const handleAddFavorite = (event) => {
     event.preventDefault();
     const userid = id;
     const houseid = singlehouse.id;
-    const favorite = {
+    const favoritee = {
       user_id: userid,
       house_id: houseid,
     };
-    if (isAdded) {
-      dispatch(removefavorite(id));
-      Notify();
-    } else {
-      dispatch(addfavorite(favorite));
-      Notify();
-    }
+    dispatch(addfavorite(favoritee));
+    Notify();
   };
+  const handleRemoveFavorite = (event) => {
+    event.preventDefault();
+    dispatch(removefavorite(id));
+    Notify();
+  };
+  if (favorite !== undefined) {
+    favorite.foreach((favhouse) => {
+      if (favhouse.house_id === id) {
+        favadded.push(true);
+      } else {
+        favadded.push(false);
+      }
+    });
+  }
+
+  if (favadded.includes(true)) {
+    addButton = (
+
+      <button
+        type="button"
+        className="appbtn"
+        onClick={handleRemoveFavorite}
+      >
+        Remove from Favourite
+      </button>
+    );
+  } else {
+    addButton = (
+
+      <button
+        type="button"
+        className="appbtn"
+        onClick={handleAddFavorite}
+      >
+        Add To Favourite
+      </button>
+    );
+  }
+
   return (
     <>
       <div className="singlehouse" data-testid="house">
@@ -74,14 +110,7 @@ const SingleHouse = ({
         </ReactTextCollapse>
       </div>
 
-      <button
-        type="button"
-        className="appbtn"
-        onClick={handleAddFavorite}
-      >
-        { isAdded ? 'Remove from Favourite'
-          : 'Add To Favourite'}
-      </button>
+      {addButton}
     </>
   );
 };
