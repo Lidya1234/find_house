@@ -41,7 +41,6 @@ const SingleHouse = ({
     };
     dispatch(addfavorite(favoritee));
     setTimeout(() => {
-      dispatch(fetchFavorite);
       history.push('/FavouriteList');
       Notify();
     }, 6000);
@@ -50,14 +49,13 @@ const SingleHouse = ({
     event.preventDefault();
     dispatch(removefavorite(singlehouse.id));
     setTimeout(() => {
-      dispatch(fetchFavorite);
       history.push('/FavouriteList');
       Notify();
     }, 6000);
   };
   if (favorite !== undefined) {
     favorite.forEach((favhouse) => {
-      if (favhouse.house_id === id) {
+      if (favhouse.house_id === singlehouse.id) {
         favadded.push(true);
       } else {
         favadded.push(false);
