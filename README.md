@@ -16,12 +16,12 @@ This is a find my house project built with react, HTML5, CSS3, and redux toolkit
 - React hooks
 
 ## Live Demo
-[Live_Demo](https://jovial-agnesi-9bf50a.netlify.app/)
+[Live_Demo](https://focused-wilson-4133ea.netlify.app/)
 
 ## Getting Started
 
 To get a local copy up and make it run, follow these simple example steps.
--  git clone https://github.com/Lidya1234/find_my_house
+-  git clone https://github.com/Lidya1234/find_house
 - npm install
 - npm start
 
