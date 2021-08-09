@@ -70,6 +70,11 @@ body {
   font-weight: bolder;
 }
 
+.brand {
+  margin-right: 30%;
+  margin-left: 10%;
+}
+
 .appbtn {
   height: 70px;
   background-color: rgb(165, 66, 8);
@@ -149,5 +154,10 @@ body {
     margin-bottom: 6px;
     margin-left: 20px;
     color: gray;
+  }
+
+  .brand {
+    margin-right: 30%;
+    margin-left: 5%;
   }
 }
