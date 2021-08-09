@@ -133,6 +133,7 @@ body {
 .links {
   text-decoration: none;
   margin-bottom: 6px;
+  margin-left: 1px;
   color: gray;
 }
 
@@ -146,7 +147,7 @@ body {
   .links {
     text-decoration: none;
     margin-bottom: 6px;
-    margin-right: 10px;
+    margin-left: 20px;
     color: gray;
   }
 }
