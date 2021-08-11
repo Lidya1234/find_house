@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`House component tests Matches snapshot 1`] = `
+<div
+  className="container"
+  data-testid="login"
+>
+  <div
+    className="login"
+  >
+    <h1>
+      Sign in
+    </h1>
+    <span>
+      Hello there! Signin and
+      <div>
+        Start managing your system
+      </div>
+    </span>
+    <form
+      className="form"
+      onSubmit={[Function]}
+    >
+      <div>
+        <input
+          className="txt-input"
+          name="username"
+          onChange={[Function]}
+          placeholder="Enter username"
+          type="text"
+        />
+      </div>
+      <div>
+        <input
+          className="txt-input"
+          name="password"
+          onChange={[Function]}
+          placeholder="Enter password"
+          type="password"
+        />
+      </div>
+      <div>
+        <button
+          className="txt-input btn-signin"
+          type="submit"
+        >
+          Sign In
+        </button>
+      </div>
+    </form>
+    <div>
+      You do not have an account
+      <a
+        className="signlink"
+        href="/Signup"
+        onClick={[Function]}
+      >
+        Sign up
+      </a>
+    </div>
+  </div>
+</div>
+`;

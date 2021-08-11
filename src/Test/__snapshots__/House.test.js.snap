@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Game component tests Matches snapshot 1`] = `
+<a
+  href="./SingleHouseList"
+  onClick={[Function]}
+>
+  <div
+    className="house"
+    data-testid="house"
+  >
+    <img
+      className="image"
+    />
+    <div
+      className="describe"
+    >
+      <div
+        className="name"
+      >
+        <div>
+           
+          <span
+            className="star-wrapper"
+          >
+            <span
+              className="stars"
+              style={
+                Object {
+                  "width": "NaN%",
+                }
+              }
+            />
+          </span>
+        </div>
+      </div>
+      <div
+        className="price"
+      >
+        $
+        <div>
+          per month
+        </div>
+      </div>
+    </div>
+  </div>
+</a>
+`;
+
+exports[`House component tests Matches snapshot 1`] = `
+<a
+  href="./SingleHouseList"
+  onClick={[Function]}
+>
+  <div
+    className="house"
+    data-testid="house"
+  >
+    <img
+      className="image"
+    />
+    <div
+      className="describe"
+    >
+      <div
+        className="name"
+      >
+        <div>
+           
+          <span
+            className="star-wrapper"
+          >
+            <span
+              className="stars"
+              style={
+                Object {
+                  "width": "NaN%",
+                }
+              }
+            />
+          </span>
+        </div>
+      </div>
+      <div
+        className="price"
+      >
+        $
+        <div>
+          per month
+        </div>
+      </div>
+    </div>
+  </div>
+</a>
+`;
