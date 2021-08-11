@@ -95,7 +95,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: auto;
+  width: 100%;
+  overflow: hidden;
   background-image: url("../image/palm4.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
