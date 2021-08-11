@@ -4,6 +4,7 @@ import { useHistory, Link } from 'react-router-dom';
 import { loginuser } from '../reducers/findSlice';
 import '../style/style.css';
 import '../style/main.scss';
+import '../style/login.css';
 import Notify from '../Notification/Notify';
 
 const Login = () => {
